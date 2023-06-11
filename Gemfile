@@ -45,7 +45,7 @@ group :test do
   gem 'rspec-rails'
   gem "capybara"
   gem "launchy"
-  gem "simplecov"
+  gem "simplecov", require: false
   gem "orderly"
   gem "shoulda-matchers"
 end
