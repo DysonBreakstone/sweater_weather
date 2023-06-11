@@ -15,7 +15,7 @@ class WeatherService
   end
 
   def daily_weather(location)
-    conn.get("forecast.json") do |request|
+    response = conn.get("forecast.json") do |request|
       request.params["q"] = "34.01158,-118.49227"
       request.params["days"] = "5"
       request.params["tp"] = "24"
@@ -24,7 +24,7 @@ class WeatherService
   end
   
   def hourly_weather(location)
-    conn.get("forecast.json") do |request|
+    response = conn.get("forecast.json") do |request|
       request.params["q"] = location
       request.params["days"] = "1"
     end
