@@ -37,17 +37,19 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 
 gem "jsonapi-serializer"
-gem 'figaro'
-gem 'pry'
-gem 'faraday'
+gem "figaro"
+gem "pry"
+gem "faraday"
+gem "securerandom"
+gem "bcrypt"
 
 group :test do
   gem 'rspec-rails'
   gem "capybara"
   gem "launchy"
-  gem "simplecov"
+  gem "simplecov", require: false
   gem "orderly"
-  gem "shoulda-matchers"
+  gem 'shoulda-matchers', '~> 5.0'
 end
 
 group :development, :test do
