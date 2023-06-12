@@ -4,14 +4,13 @@ class LibraryService
   end
 
   def get_url(url, params)
-    # require 'pry'; binding.pry
     conn.get(url, params)
   end
 
   def search_books(city, quantity)
     params = {
       q: city,
-      quantity: quantity
+      limit: quantity
     }
     response = get_url("/search.json", params)
     JSON.parse(response.body, symbolize_names: true)

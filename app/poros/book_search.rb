@@ -11,7 +11,6 @@ class BookSearch
     @forecast = format_forecast(weather_result)
     @total_books_found = books_result[:numFound]
     @books = format_books(books_result[:docs])
-    require 'pry'; binding.pry
   end
 
   def format_books(data)
@@ -27,7 +26,7 @@ class BookSearch
   def format_forecast(data)
     {
       summary: data[:current][:condition][:text],
-      temperature: data[:current][:temp_f]
+      temperature: data[:current][:temp_f].to_f
     }
   end
 end
