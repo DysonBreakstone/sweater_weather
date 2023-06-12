@@ -9,6 +9,7 @@ RSpec.describe "Mapquest Service" do
     it "makes call" do
       response = @service.get_geo_response("Calais, VT")
       json = JSON.parse(response.body, symbolize_names: true)
+      
       expect(response.status).to eq(200)
       expect(json[:results].first[:locations].first[:latLng]).to have_key(:lat)
       expect(json[:results].first[:locations].first[:latLng]).to have_key(:lng)
