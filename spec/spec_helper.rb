@@ -14,6 +14,8 @@
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+
+
 require 'simplecov'
 SimpleCov.start 'rails' do
   add_filter '/bin/'
@@ -23,7 +25,6 @@ SimpleCov.start 'rails' do
   add_filter '/app/channels/'
   add_filter '/app/jobs/'
   add_filter '/app/mailers/'
-  add_filter '/app/models/'
 end
 
 RSpec.configure do |config|
@@ -105,3 +106,5 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+

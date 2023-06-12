@@ -240,7 +240,7 @@ DEPENDENCIES
   rails (~> 7.0.5)
   rspec-rails
   securerandom
-  shoulda-matchers
+  shoulda-matchers (~> 5.0)
   simplecov
   tzinfo-data
 

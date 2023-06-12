@@ -49,7 +49,7 @@ group :test do
   gem "launchy"
   gem "simplecov", require: false
   gem "orderly"
-  gem "shoulda-matchers"
+  gem 'shoulda-matchers', '~> 5.0'
 end
 
 group :development, :test do
