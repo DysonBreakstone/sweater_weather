@@ -2,6 +2,10 @@ class BooksFacade
   def book_search(city, quantity)
     books_result = LibraryService.new.search_books(city, quantity)
     forecast = WeatherService.new.current_weather(city)
-    BookSearch.new(city, books_result, forecast)
+    if forecast[:error]
+      return { errors: forecast[:error][:message] }
+    else
+      return BookSearch.new(city, books_result, forecast)
+    end
   end
 end

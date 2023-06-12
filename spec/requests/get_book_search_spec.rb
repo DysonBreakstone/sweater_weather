@@ -37,8 +37,29 @@ RSpec.describe "Book Search" do
         quantity: "5"
       }
       json = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response.status).to eq(400)
+      expect(json[:errors]).to eq("Must include location and quantity in search parameters")
     end
 
+    it "no quantity" do
+      get "/api/v1/book-search", params: {
+        location: "columbus,oh",
+        quantity: ""
+      }
+      json = JSON.parse(response.body, symbolize_names: true)
 
+      expect(response.status).to eq(400)
+      expect(json[:errors]).to eq("Must include location and quantity in search parameters")
+    end
+
+    it "nonexistent city" do
+      get "/api/v1/book-search", params: {
+        location: "gorrillatown,zz",
+        quantity: "5"
+      }
+      json = JSON.parse(response.body, symbolize_names: true)
+      require 'pry'; binding.pry
+    end
   end
 end
