@@ -18,5 +18,15 @@ RSpec.describe "Mapquest Service" do
     it "#lat_lon" do
       expect(@service.lat_lon("Calais, VT")).to eq("44.37552,-72.49481")
     end
+
+    it "#time_to_destination" do
+      time = @service.time_to_destination("plainfield,vt", "crested butte,co")
+      expect(time).to be_a(Integer)
+    end
+
+    it "closer destinations" do
+      time = @service.time_to_destination("Boulder,co", "Denver,co")
+      expect(time).to be_a(Integer)
+    end
   end
 end
