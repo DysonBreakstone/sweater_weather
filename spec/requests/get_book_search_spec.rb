@@ -28,6 +28,14 @@ RSpec.describe "Book Search" do
       expect(result[:data][:attributes][:books].first[:title]).to be_a(String)
       expect(result[:data][:attributes][:books].first[:publisher]).to be_a(Array)
     end
+
+    it "ONLY has the required keys and attributes" do
+      result = JSON.parse(response.body, symbolize_names: true)
+      exp_keys = [:id, :type, :attributes]
+      exp_attributes = [:destination, :forecast, :total_books_found, :books, :id]
+      expect((result[:data].keys & exp_keys).sort).to eq(result[:data].keys.sort)
+      expect((result[:data][:attributes].keys & exp_attributes).sort).to eq(result[:data][:attributes].keys.sort)
+    end
   end
 
   describe "Sad Path" do
