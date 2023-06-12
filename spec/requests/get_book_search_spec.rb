@@ -59,7 +59,10 @@ RSpec.describe "Book Search" do
         quantity: "5"
       }
       json = JSON.parse(response.body, symbolize_names: true)
-      require 'pry'; binding.pry
+      
+      expect(response.status).to eq(404)
+      expect(json[:data][:type]).to eq("error")
+      expect(json[:data][:attributes][:errors].first).to eq("No matching location found.")
     end
   end
 end
