@@ -1,8 +1,8 @@
 class BooksFacade
   def book_search(city, quantity)
-    books_result = BookSearchService.new.search_books(city, quantity)
+    # require 'pry'; binding.pry
+    books_result = LibraryService.new.search_books(city, quantity)
     forecast = WeatherService.new.current_weather(city)
-    require 'pry'; binding.pry
-    BookSearch.new(books_result, forecast)
+    BookSearch.new(city, books_result, forecast)
   end
 end

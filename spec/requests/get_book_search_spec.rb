@@ -10,6 +10,7 @@ RSpec.describe "Book Search" do
     end
 
     it "gets response" do
+      require 'pry'; binding.pry
       expect(@response.status).to eq(200)
     end
 
