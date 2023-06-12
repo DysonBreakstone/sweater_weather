@@ -37,9 +37,11 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 
 gem "jsonapi-serializer"
-gem 'figaro'
-gem 'pry'
-gem 'faraday'
+gem "figaro"
+gem "pry"
+gem "faraday"
+gem "securerandom"
+gem "bcrypt"
 
 group :test do
   gem 'rspec-rails'
