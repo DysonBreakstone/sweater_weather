@@ -4,7 +4,7 @@ RSpec.describe "Book Search" do
   describe "get request" do
     before do
       get "/api/v1/book-search", params: {
-        location: "denver,co",
+        location: "burlington,vt",
         quantity: "5"
       }
     end
@@ -14,11 +14,11 @@ RSpec.describe "Book Search" do
     end
 
     it "has expected structure" do
-      result = JSON.parse(@response.body, symbolize_names: true)
+      result = JSON.parse(response.body, symbolize_names: true)
       expect(result).to have_key(:data)
       expect(result[:data][:id]).to eq(nil)
       expect(result[:data][:type]).to eq("books")
-      expect(result[:data][:attributes][:destination]).to eq("denver,co")
+      expect(result[:data][:attributes][:destination]).to eq("burlington,vt")
       expect(result[:data][:attributes][:forecast][:summary]).to be_a(String)
       expect(result[:data][:attributes][:forecast][:temperature]).to be_a(Float)
       expect(result[:data][:attributes][:total_books_found]).to be_a(Integer)
@@ -28,5 +28,17 @@ RSpec.describe "Book Search" do
       expect(result[:data][:attributes][:books].first[:title]).to be_a(String)
       expect(result[:data][:attributes][:books].first[:publisher]).to be_a(Array)
     end
+  end
+
+  describe "Sad Path" do
+    it "no location" do
+      get "/api/v1/book-search", params: {
+        location: "",
+        quantity: "5"
+      }
+      json = JSON.parse(response.body, symbolize_names: true)
+    end
+
+
   end
 end
