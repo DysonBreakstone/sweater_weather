@@ -1,5 +1,3 @@
-require "securerandom"
-
 class Api::V0::UsersController < ApplicationController
   def create
     body = JSON.parse(request.body.read, symbolize_names: true)
