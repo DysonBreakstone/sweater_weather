@@ -8,7 +8,7 @@ RSpec.describe Api::V0::SessionsController, :type => :controller do
         email: "whatever@example.com",
         password: "pass"
     }.to_json
-      request.headers['Content-Type'] = 'application/json'
+      request.headers['Content-Type'] = 'application/json' 
     end
 
     it "creates session" do

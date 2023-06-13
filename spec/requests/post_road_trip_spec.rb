@@ -9,7 +9,9 @@ RSpec.describe Api::V0::RoadTripController, type: :controller do
         "origin": "Cincinatti,OH",
         "destination": "Chicago,IL",
         "api_key": api_key
-      }
+    }.to_json
+      request.headers['Content-Type'] = 'application/json'
+      request.headers['Accept'] = 'application/json'
       post :create, body: json_payload
     end
 
