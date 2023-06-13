@@ -74,5 +74,20 @@ RSpec.describe "calls" do
       expect(json[:forecast][:forecastday].first[:hour].first[:condition][:icon]).to be_a(String)
       expect(json[:forecast][:forecastday].first[:hour].first[:condition][:icon].reverse[0,3]).to eq("gnp")
     end
+
+    it "weather at certain time and destination" do
+      tomorrow = Time.now + (24 * 60 * 60)
+      date = tomorrow.strftime("%Y-%m-%d")
+      hour = tomorrow.strftime("%H") + ()
+      json = @service.weather_at_destination("burlington,vt", date, hour)
+
+      expect(json[:location][:localtime]).to be_a(String)
+    end
+
+    it "local_time" do
+      time = @service.local_time("burlington, vt")
+      now = DateTime.strptime(Time.now.to_s, "%Y-%m-%d %H:%M").to_time
+      expect((7400 > (time - now)) && ((time - now) > 7000)).to eq(true)
+    end
   end
 end
