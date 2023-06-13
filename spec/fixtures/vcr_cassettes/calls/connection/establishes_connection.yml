@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.weatherapi.com/v1/current.json?key=DONT_SHARE_MY_DATA_1&q=34.01158,-118.49227
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Jun 2023 17:17:06 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - BunnyCDN-IL1-1070
+      Cdn-Pullzone:
+      - '93447'
+      Cdn-Uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      Cdn-Requestcountrycode:
+      - US
+      Cache-Control:
+      - public, max-age=180
+      Cdn-Proxyver:
+      - '1.03'
+      Cdn-Requestpullsuccess:
+      - 'True'
+      Cdn-Requestpullcode:
+      - '200'
+      Cdn-Cachedat:
+      - 06/13/2023 17:17:06
+      Cdn-Edgestorageid:
+      - '1068'
+      Cdn-Status:
+      - '200'
+      Cdn-Requestid:
+      - c9cd09e87e7dd7d0fd3fa0c8303903a7
+      Cdn-Cache:
+      - EXPIRED
+    body:
+      encoding: ASCII-8BIT
+      string: '{"location":{"name":"Santa Monica","region":"California","country":"United
+        States of America","lat":34.01,"lon":-118.49,"tz_id":"America/Los_Angeles","localtime_epoch":1686676626,"localtime":"2023-06-13
+        10:17"},"current":{"last_updated_epoch":1686676500,"last_updated":"2023-06-13
+        10:15","temp_c":18.3,"temp_f":64.9,"is_day":1,"condition":{"text":"Partly
+        cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png","code":1003},"wind_mph":6.9,"wind_kph":11.2,"wind_degree":230,"wind_dir":"SW","pressure_mb":1018.0,"pressure_in":30.05,"precip_mm":0.0,"precip_in":0.0,"humidity":68,"cloud":75,"feelslike_c":18.3,"feelslike_f":64.9,"vis_km":16.0,"vis_miles":9.0,"uv":5.0,"gust_mph":6.3,"gust_kph":10.1}}'
+  recorded_at: Tue, 13 Jun 2023 17:17:06 GMT
+recorded_with: VCR 6.1.0

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe RoadTripFacade do
+RSpec.describe RoadTripFacade, vcr: { record: :new_episodes } do
   describe "methods" do
     it "#time_at_destination" do
       facade = RoadTripFacade.new
@@ -13,7 +13,7 @@ RSpec.describe RoadTripFacade do
 
     it "#create_road_trip" do
       road_trip = RoadTripFacade.new.create_road_trip("boulder,co","burlington,vt")
-      require 'pry'; binding.pry
+      # require 'pry'; binding.pry
     end
   end
 end

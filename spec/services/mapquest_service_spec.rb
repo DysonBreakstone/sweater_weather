@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Mapquest Service" do
+RSpec.describe "Mapquest Service", vcr: { record: :new_episodes } do
   describe "calls" do
     before do
       @service = MapquestService.new

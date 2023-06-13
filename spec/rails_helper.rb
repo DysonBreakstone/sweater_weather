@@ -68,3 +68,13 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  config.hook_into :webmock
+  config.default_cassette_options = { re_record_interval: 1.months }
+  config.configure_rspec_metadata!
+  config.default_cassette_options = { allow_playback_repeats: true }
+  config.filter_sensitive_data('DONT_SHARE_MY_DATA_1') { ENV['WEATHER_API_KEY'] }
+  config.filter_sensitive_data('DONT_SHARE_MY_DATA_2') { ENV['MAPQUEST_API_KEY'] }
+end

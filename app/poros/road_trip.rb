@@ -1,6 +1,7 @@
 class RoadTrip
-  attr_reader :start_city, :end_city, :travel_time, :weather_at_eta
+  attr_reader :start_city, :end_city, :travel_time, :weather_at_eta, :id
   def initialize(origin, destination, road_time, weather_report)
+    @id = nil
     @start_city = format_place(origin)
     @end_city = format_place(destination)
     @travel_time = road_time

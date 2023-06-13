@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.weatherapi.com/v1/current.json?key=DONT_SHARE_MY_DATA_1&q=burlington,%20vt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Jun 2023 17:17:08 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - BunnyCDN-IL1-1070
+      Cdn-Pullzone:
+      - '93447'
+      Cdn-Uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      Cdn-Requestcountrycode:
+      - US
+      Cache-Control:
+      - public, max-age=180
+      Cdn-Proxyver:
+      - '1.03'
+      Cdn-Requestpullsuccess:
+      - 'True'
+      Cdn-Requestpullcode:
+      - '200'
+      Cdn-Cachedat:
+      - 06/13/2023 17:17:08
+      Cdn-Edgestorageid:
+      - '845'
+      Cdn-Status:
+      - '200'
+      Cdn-Requestid:
+      - 87bd52ae1cb0a3db8ea444fc8d3d83ae
+      Cdn-Cache:
+      - EXPIRED
+    body:
+      encoding: ASCII-8BIT
+      string: '{"location":{"name":"Burlington","region":"Vermont","country":"United
+        States of America","lat":44.48,"lon":-73.21,"tz_id":"America/New_York","localtime_epoch":1686676628,"localtime":"2023-06-13
+        13:17"},"current":{"last_updated_epoch":1686676500,"last_updated":"2023-06-13
+        13:15","temp_c":20.0,"temp_f":68.0,"is_day":1,"condition":{"text":"Overcast","icon":"//cdn.weatherapi.com/weather/64x64/day/122.png","code":1009},"wind_mph":5.6,"wind_kph":9.0,"wind_degree":20,"wind_dir":"NNE","pressure_mb":1005.0,"pressure_in":29.67,"precip_mm":0.6,"precip_in":0.02,"humidity":76,"cloud":100,"feelslike_c":20.0,"feelslike_f":68.0,"vis_km":16.0,"vis_miles":9.0,"uv":4.0,"gust_mph":4.5,"gust_kph":7.2}}'
+  recorded_at: Tue, 13 Jun 2023 17:17:08 GMT
+recorded_with: VCR 6.1.0

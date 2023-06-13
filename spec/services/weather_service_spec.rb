@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "calls" do
+RSpec.describe "calls", vcr: { record: :new_episodes } do
   describe "connection" do
     before do 
       @service = WeatherService.new
