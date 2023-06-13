@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 13 Jun 2023 17:17:06 GMT
+      - Tue, 13 Jun 2023 17:39:54 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Server:
-      - BunnyCDN-IL1-1070
+      - BunnyCDN-IL1-941
       Cdn-Pullzone:
       - '93447'
       Cdn-Uid:
@@ -47,20 +47,20 @@ http_interactions:
       Cdn-Requestpullcode:
       - '200'
       Cdn-Cachedat:
-      - 06/13/2023 17:17:06
+      - 06/13/2023 17:39:54
       Cdn-Edgestorageid:
       - '1068'
       Cdn-Status:
       - '200'
       Cdn-Requestid:
-      - 90479e1b3d50b9bc8e6920d003f976ef
+      - 8d3f38eb4ea05df9467c588f60551c03
       Cdn-Cache:
       - EXPIRED
     body:
       encoding: ASCII-8BIT
       string: '{"location":{"name":"Medford","region":"Oregon","country":"United States
-        of America","lat":42.33,"lon":-122.88,"tz_id":"America/Los_Angeles","localtime_epoch":1686676626,"localtime":"2023-06-13
-        10:17"},"current":{"last_updated_epoch":1686676500,"last_updated":"2023-06-13
-        10:15","temp_c":23.3,"temp_f":73.9,"is_day":1,"condition":{"text":"Mist","icon":"//cdn.weatherapi.com/weather/64x64/day/143.png","code":1030},"wind_mph":2.2,"wind_kph":3.6,"wind_degree":10,"wind_dir":"N","pressure_mb":1017.0,"pressure_in":30.02,"precip_mm":0.0,"precip_in":0.0,"humidity":56,"cloud":0,"feelslike_c":24.9,"feelslike_f":76.8,"vis_km":9.7,"vis_miles":6.0,"uv":6.0,"gust_mph":4.9,"gust_kph":7.9}}'
-  recorded_at: Tue, 13 Jun 2023 17:17:06 GMT
+        of America","lat":42.33,"lon":-122.88,"tz_id":"America/Los_Angeles","localtime_epoch":1686677993,"localtime":"2023-06-13
+        10:39"},"current":{"last_updated_epoch":1686677400,"last_updated":"2023-06-13
+        10:30","temp_c":23.3,"temp_f":73.9,"is_day":1,"condition":{"text":"Mist","icon":"//cdn.weatherapi.com/weather/64x64/day/143.png","code":1030},"wind_mph":2.2,"wind_kph":3.6,"wind_degree":10,"wind_dir":"N","pressure_mb":1017.0,"pressure_in":30.02,"precip_mm":0.0,"precip_in":0.0,"humidity":56,"cloud":0,"feelslike_c":24.9,"feelslike_f":76.8,"vis_km":9.7,"vis_miles":6.0,"uv":6.0,"gust_mph":4.9,"gust_kph":7.9}}'
+  recorded_at: Tue, 13 Jun 2023 17:39:53 GMT
 recorded_with: VCR 6.1.0

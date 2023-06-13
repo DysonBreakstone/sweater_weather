@@ -19,7 +19,15 @@ RSpec.describe Api::V0::RoadTripController, type: :controller, vcr: { record: :n
       post :create, body: @json_payload
       json = JSON.parse(response.body, symbolize_names: true)
       expect(response.status).to eq(201)
-      require 'pry'; binding.pry
+      expect(json[:data][:id]).to eq(nil)
+      expect(json[:data][:type]).to eq("road_trip")
+      expect(json[:data][:attributes][:start_city]).to eq("Cincinatti, OH")
+      expect(json[:data][:attributes][:end_city]).to eq("Chicago, IL")
+      expect(json[:data][:attributes][:travel_time][0,2]).to eq("04")
+      expect(json[:data][:attributes][:weather_at_eta]).to be_a(Hash)
+      expect(json[:data][:attributes][:weather_at_eta][:datetime]).to be_a(String)
+      expect(json[:data][:attributes][:weather_at_eta][:temperature]).to be_a(Float)
+      expect(json[:data][:attributes][:weather_at_eta][:condition]).to be_a(String)
     end
   end
 end

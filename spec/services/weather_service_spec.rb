@@ -83,9 +83,9 @@ RSpec.describe "calls", vcr: { record: :new_episodes } do
     end
 
     it "local_time" do
-      time = @service.local_time("burlington, vt")
-      now = DateTime.strptime(Time.now.to_s, "%Y-%m-%d %H:%M:%S").to_time
-      expect((7400 > (time - now)) && ((time - now) > 7000)).to eq(true)
+      time = @service.local_time("burlington,vt")
+      boulder_time = @service.local_time("boulder,co")
+      expect((7400 > (time - boulder_time)) && ((time - boulder_time) > 7000)).to eq(true)
     end
   end
 end

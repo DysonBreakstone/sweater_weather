@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 13 Jun 2023 17:17:08 GMT
+      - Tue, 13 Jun 2023 17:39:55 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Server:
-      - BunnyCDN-IL1-1070
+      - BunnyCDN-IL1-941
       Cdn-Pullzone:
       - '93447'
       Cdn-Uid:
@@ -47,20 +47,146 @@ http_interactions:
       Cdn-Requestpullcode:
       - '200'
       Cdn-Cachedat:
-      - 06/13/2023 17:17:08
+      - 06/13/2023 17:39:55
       Cdn-Edgestorageid:
       - '845'
       Cdn-Status:
       - '200'
       Cdn-Requestid:
-      - 87bd52ae1cb0a3db8ea444fc8d3d83ae
+      - 6f7d0214301db70f817fb3a3e658abdd
       Cdn-Cache:
       - EXPIRED
     body:
       encoding: ASCII-8BIT
       string: '{"location":{"name":"Burlington","region":"Vermont","country":"United
-        States of America","lat":44.48,"lon":-73.21,"tz_id":"America/New_York","localtime_epoch":1686676628,"localtime":"2023-06-13
-        13:17"},"current":{"last_updated_epoch":1686676500,"last_updated":"2023-06-13
-        13:15","temp_c":20.0,"temp_f":68.0,"is_day":1,"condition":{"text":"Overcast","icon":"//cdn.weatherapi.com/weather/64x64/day/122.png","code":1009},"wind_mph":5.6,"wind_kph":9.0,"wind_degree":20,"wind_dir":"NNE","pressure_mb":1005.0,"pressure_in":29.67,"precip_mm":0.6,"precip_in":0.02,"humidity":76,"cloud":100,"feelslike_c":20.0,"feelslike_f":68.0,"vis_km":16.0,"vis_miles":9.0,"uv":4.0,"gust_mph":4.5,"gust_kph":7.2}}'
-  recorded_at: Tue, 13 Jun 2023 17:17:08 GMT
+        States of America","lat":44.48,"lon":-73.21,"tz_id":"America/New_York","localtime_epoch":1686677995,"localtime":"2023-06-13
+        13:39"},"current":{"last_updated_epoch":1686677400,"last_updated":"2023-06-13
+        13:30","temp_c":20.0,"temp_f":68.0,"is_day":1,"condition":{"text":"Overcast","icon":"//cdn.weatherapi.com/weather/64x64/day/122.png","code":1009},"wind_mph":5.6,"wind_kph":9.0,"wind_degree":20,"wind_dir":"NNE","pressure_mb":1005.0,"pressure_in":29.67,"precip_mm":0.6,"precip_in":0.02,"humidity":76,"cloud":100,"feelslike_c":20.0,"feelslike_f":68.0,"vis_km":16.0,"vis_miles":9.0,"uv":4.0,"gust_mph":4.5,"gust_kph":7.2}}'
+  recorded_at: Tue, 13 Jun 2023 17:39:54 GMT
+- request:
+    method: get
+    uri: https://api.weatherapi.com/v1/current.json?key=DONT_SHARE_MY_DATA_1&q=burlington,vt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Jun 2023 19:07:05 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - BunnyCDN-IL1-718
+      Cdn-Pullzone:
+      - '93447'
+      Cdn-Uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      Cdn-Requestcountrycode:
+      - US
+      Cache-Control:
+      - public, max-age=180
+      Cdn-Proxyver:
+      - '1.03'
+      Cdn-Requestpullsuccess:
+      - 'True'
+      Cdn-Requestpullcode:
+      - '200'
+      Cdn-Cachedat:
+      - 06/13/2023 19:07:05
+      Cdn-Edgestorageid:
+      - '1067'
+      Cdn-Status:
+      - '200'
+      Cdn-Requestid:
+      - 231d3e2a2da1afa5349b46d8055a85ea
+      Cdn-Cache:
+      - EXPIRED
+    body:
+      encoding: ASCII-8BIT
+      string: '{"location":{"name":"Burlington","region":"Vermont","country":"United
+        States of America","lat":44.48,"lon":-73.21,"tz_id":"America/New_York","localtime_epoch":1686683225,"localtime":"2023-06-13
+        15:07"},"current":{"last_updated_epoch":1686682800,"last_updated":"2023-06-13
+        15:00","temp_c":18.9,"temp_f":66.0,"is_day":1,"condition":{"text":"Overcast","icon":"//cdn.weatherapi.com/weather/64x64/day/122.png","code":1009},"wind_mph":4.3,"wind_kph":6.8,"wind_degree":320,"wind_dir":"NW","pressure_mb":1005.0,"pressure_in":29.68,"precip_mm":0.2,"precip_in":0.01,"humidity":84,"cloud":100,"feelslike_c":18.9,"feelslike_f":66.0,"vis_km":16.0,"vis_miles":9.0,"uv":4.0,"gust_mph":2.7,"gust_kph":4.3}}'
+  recorded_at: Tue, 13 Jun 2023 19:07:05 GMT
+- request:
+    method: get
+    uri: https://api.weatherapi.com/v1/current.json?key=DONT_SHARE_MY_DATA_1&q=boulder,co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Jun 2023 19:07:05 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - BunnyCDN-IL1-718
+      Cdn-Pullzone:
+      - '93447'
+      Cdn-Uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      Cdn-Requestcountrycode:
+      - US
+      Cache-Control:
+      - public, max-age=180
+      Cdn-Proxyver:
+      - '1.03'
+      Cdn-Requestpullsuccess:
+      - 'True'
+      Cdn-Requestpullcode:
+      - '200'
+      Cdn-Cachedat:
+      - 06/13/2023 19:07:05
+      Cdn-Edgestorageid:
+      - '941'
+      Cdn-Status:
+      - '200'
+      Cdn-Requestid:
+      - 5832e9ff79333f49a4fc72665139b4a8
+      Cdn-Cache:
+      - EXPIRED
+    body:
+      encoding: ASCII-8BIT
+      string: '{"location":{"name":"Boulder","region":"Colorado","country":"United
+        States of America","lat":40.02,"lon":-105.27,"tz_id":"America/Denver","localtime_epoch":1686683225,"localtime":"2023-06-13
+        13:07"},"current":{"last_updated_epoch":1686682800,"last_updated":"2023-06-13
+        13:00","temp_c":12.0,"temp_f":53.6,"is_day":1,"condition":{"text":"Light rain","icon":"//cdn.weatherapi.com/weather/64x64/day/296.png","code":1183},"wind_mph":3.8,"wind_kph":6.1,"wind_degree":10,"wind_dir":"N","pressure_mb":1018.0,"pressure_in":30.06,"precip_mm":0.3,"precip_in":0.01,"humidity":94,"cloud":100,"feelslike_c":11.7,"feelslike_f":53.0,"vis_km":8.0,"vis_miles":4.0,"uv":3.0,"gust_mph":4.7,"gust_kph":7.6}}'
+  recorded_at: Tue, 13 Jun 2023 19:07:05 GMT
 recorded_with: VCR 6.1.0
