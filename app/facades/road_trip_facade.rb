@@ -1,10 +1,13 @@
 class RoadTripFacade
   def create_road_trip(origin, destination)
     map_service = MapquestService.new
-    weather_service = WeatherService.new
     road_time = map_service.time_to_destination(origin, destination)
+    if road_time[:formatted_time] == "impossible"
+      return RoadTrip.new(origin, destination, road_time[:formatted_time], {})
+    end
     real_road_time = road_time[:real_time]
     readable_road_time = road_time[:formatted_time]
+    weather_service = WeatherService.new
     arrival_time = time_at_destination(destination, real_road_time)
     arrival_date = arrival_time.strftime("%Y-%m-%d")
     arrival_hour = arrival_time.strftime("%H")

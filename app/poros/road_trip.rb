@@ -16,6 +16,9 @@ class RoadTrip
   end
 
   def format_weather_report(weather)
+    if weather.empty?
+      return {}
+    end
     {
       datetime: weather[:forecast][:forecastday].first[:hour].first[:time],
       temperature:  weather[:forecast][:forecastday].first[:hour].first[:temp_f].to_f,

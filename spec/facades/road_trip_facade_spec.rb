@@ -14,6 +14,15 @@ RSpec.describe RoadTripFacade, vcr: { record: :new_episodes } do
     it "#create_road_trip" do
       road_trip = RoadTripFacade.new.create_road_trip("boulder,co","burlington,vt")
       expect(road_trip).to be_a(RoadTrip)
+      expect(road_trip.travel_time).to_not eq("impossible")
+      expect(road_trip.weather_at_eta.empty?).to eq(false)
+    end
+
+    it "impossible destination" do
+      road_trip = RoadTripFacade.new.create_road_trip("boulder,co", "barcelona,spain")
+      expect(road_trip).to be_a(RoadTrip)
+      expect(road_trip.travel_time).to eq("impossible")
+      expect(road_trip.weather_at_eta.empty?).to eq(true)
     end
   end
 end

@@ -36,5 +36,10 @@ RSpec.describe "Mapquest Service", vcr: { record: :new_episodes } do
       expect(time[:formatted_time]).to be_a(String)
       expect(time[:formatted_time][0,4]).to eq("00:3")
     end
+
+    it "not possible" do
+      time = @service.time_to_destination("boulder,co", "hong kong, china")
+      expect(time[:formatted_time]).to eq("impossible")
+    end
   end
 end

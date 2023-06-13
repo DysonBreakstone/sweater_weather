@@ -30,4 +30,32 @@ RSpec.describe Api::V0::RoadTripController, type: :controller, vcr: { record: :n
       expect(json[:data][:attributes][:weather_at_eta][:condition]).to be_a(String)
     end
   end
+
+  describe "sad paths" do
+    before do
+      @api_key = SecureRandom.hex(24)
+      @user_1 = User.create!(email: "whatever@example.com", password: "pass", password_confirmation: "pass", api_key: @api_key)
+      session[:user_id] = @user_1.id
+    end
+
+    it "impossible destination" do
+      json_payload = {
+        "origin": "Cincinatti,OH",
+        "destination": "kyoto,japan",
+        "api_key": @api_key
+      }.to_json
+      request.headers['Content-Type'] = 'application/json'
+      request.headers['Accept'] = 'application/json'
+      post :create, body: json_payload
+      json = JSON.parse(response.body, symbolize_names: true)
+      
+      expect(response.status).to eq(201)
+      expect(json[:data][:id]).to eq(nil)
+      expect(json[:data][:type]).to eq("road_trip")
+      expect(json[:data][:attributes][:start_city]).to eq("Cincinatti, OH")
+      expect(json[:data][:attributes][:end_city]).to eq("Kyoto, JAPAN")
+      expect(json[:data][:attributes][:travel_time]).to eq("impossible")
+      expect(json[:data][:attributes][:weather_at_eta].empty?).to eq(true)
+    end
+  end
 end
