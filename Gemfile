@@ -50,6 +50,8 @@ group :test do
   gem "simplecov", require: false
   gem "orderly"
   gem 'shoulda-matchers', '~> 5.0'
+  gem "webmock"
+  gem "vcr"
 end
 
 group :development, :test do

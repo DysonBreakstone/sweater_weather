@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :sessions, only: [:create]
       resources :users, only: [:create]
       resources :forecast, only: [:index]
+      resources :road_trip, only: [:create]
     end
   end
 end

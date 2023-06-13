@@ -1,0 +1,207 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.weatherapi.com/v1/forecast.json?date=2023-06-14&days=1&hour=11&key=DONT_SHARE_MY_DATA_1&q=burlington,vt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Jun 2023 17:39:54 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - BunnyCDN-IL1-941
+      Cdn-Pullzone:
+      - '93447'
+      Cdn-Uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      Cdn-Requestcountrycode:
+      - US
+      Cache-Control:
+      - public, max-age=180
+      Cdn-Proxyver:
+      - '1.03'
+      Cdn-Requestpullsuccess:
+      - 'True'
+      Cdn-Requestpullcode:
+      - '200'
+      Cdn-Cachedat:
+      - 06/13/2023 17:39:54
+      Cdn-Edgestorageid:
+      - '1029'
+      Cdn-Status:
+      - '200'
+      Cdn-Requestid:
+      - 252a48559584f11b13476d85a4e1c1f8
+      Cdn-Cache:
+      - EXPIRED
+    body:
+      encoding: ASCII-8BIT
+      string: '{"location":{"name":"Burlington","region":"Vermont","country":"United
+        States of America","lat":44.48,"lon":-73.21,"tz_id":"America/New_York","localtime_epoch":1686677994,"localtime":"2023-06-13
+        13:39"},"current":{"last_updated_epoch":1686677400,"last_updated":"2023-06-13
+        13:30","temp_c":20.0,"temp_f":68.0,"is_day":1,"condition":{"text":"Overcast","icon":"//cdn.weatherapi.com/weather/64x64/day/122.png","code":1009},"wind_mph":5.6,"wind_kph":9.0,"wind_degree":20,"wind_dir":"NNE","pressure_mb":1005.0,"pressure_in":29.67,"precip_mm":0.6,"precip_in":0.02,"humidity":76,"cloud":100,"feelslike_c":20.0,"feelslike_f":68.0,"vis_km":16.0,"vis_miles":9.0,"uv":4.0,"gust_mph":4.5,"gust_kph":7.2},"forecast":{"forecastday":[{"date":"2023-06-14","date_epoch":1686700800,"day":{"maxtemp_c":21.8,"maxtemp_f":71.2,"mintemp_c":13.2,"mintemp_f":55.8,"avgtemp_c":16.2,"avgtemp_f":61.1,"maxwind_mph":16.8,"maxwind_kph":27.0,"totalprecip_mm":7.7,"totalprecip_in":0.3,"totalsnow_cm":0.0,"avgvis_km":5.8,"avgvis_miles":3.0,"avghumidity":86.0,"daily_will_it_rain":1,"daily_chance_of_rain":87,"daily_will_it_snow":0,"daily_chance_of_snow":0,"condition":{"text":"Moderate
+        rain","icon":"//cdn.weatherapi.com/weather/64x64/day/302.png","code":1189},"uv":4.0},"astro":{"sunrise":"05:07
+        AM","sunset":"08:38 PM","moonrise":"02:44 AM","moonset":"05:19 PM","moon_phase":"Waning
+        Crescent","moon_illumination":"18","is_moon_up":0,"is_sun_up":1},"hour":[{"time_epoch":1686754800,"time":"2023-06-14
+        11:00","temp_c":20.4,"temp_f":68.7,"is_day":1,"condition":{"text":"Patchy
+        rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png","code":1063},"wind_mph":1.8,"wind_kph":2.9,"wind_degree":179,"wind_dir":"S","pressure_mb":1002.0,"pressure_in":29.58,"precip_mm":0.2,"precip_in":0.01,"humidity":62,"cloud":79,"feelslike_c":20.4,"feelslike_f":68.7,"windchill_c":20.4,"windchill_f":68.7,"heatindex_c":20.4,"heatindex_f":68.7,"dewpoint_c":12.9,"dewpoint_f":55.2,"will_it_rain":1,"chance_of_rain":71,"will_it_snow":0,"chance_of_snow":0,"vis_km":9.0,"vis_miles":5.0,"gust_mph":2.0,"gust_kph":3.2,"uv":5.0}]}]}}'
+  recorded_at: Tue, 13 Jun 2023 17:39:54 GMT
+- request:
+    method: get
+    uri: https://api.weatherapi.com/v1/forecast.json?date=2023-06-14&days=1&hour=13&key=DONT_SHARE_MY_DATA_1&q=burlington,vt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Jun 2023 19:03:49 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - BunnyCDN-IL1-1068
+      Cdn-Pullzone:
+      - '93447'
+      Cdn-Uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      Cdn-Requestcountrycode:
+      - US
+      Cache-Control:
+      - public, max-age=180
+      Cdn-Proxyver:
+      - '1.03'
+      Cdn-Requestpullsuccess:
+      - 'True'
+      Cdn-Requestpullcode:
+      - '200'
+      Cdn-Cachedat:
+      - 06/13/2023 19:03:49
+      Cdn-Edgestorageid:
+      - '871'
+      Cdn-Status:
+      - '200'
+      Cdn-Requestid:
+      - ecdf7981360455b3b127b617ef679333
+      Cdn-Cache:
+      - MISS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"location":{"name":"Burlington","region":"Vermont","country":"United
+        States of America","lat":44.48,"lon":-73.21,"tz_id":"America/New_York","localtime_epoch":1686683029,"localtime":"2023-06-13
+        15:03"},"current":{"last_updated_epoch":1686682800,"last_updated":"2023-06-13
+        15:00","temp_c":18.9,"temp_f":66.0,"is_day":1,"condition":{"text":"Overcast","icon":"//cdn.weatherapi.com/weather/64x64/day/122.png","code":1009},"wind_mph":4.3,"wind_kph":6.8,"wind_degree":320,"wind_dir":"NW","pressure_mb":1005.0,"pressure_in":29.68,"precip_mm":0.2,"precip_in":0.01,"humidity":84,"cloud":100,"feelslike_c":18.9,"feelslike_f":66.0,"vis_km":16.0,"vis_miles":9.0,"uv":4.0,"gust_mph":2.7,"gust_kph":4.3},"forecast":{"forecastday":[{"date":"2023-06-14","date_epoch":1686700800,"day":{"maxtemp_c":21.8,"maxtemp_f":71.2,"mintemp_c":13.2,"mintemp_f":55.8,"avgtemp_c":16.2,"avgtemp_f":61.1,"maxwind_mph":16.8,"maxwind_kph":27.0,"totalprecip_mm":7.7,"totalprecip_in":0.3,"totalsnow_cm":0.0,"avgvis_km":5.8,"avgvis_miles":3.0,"avghumidity":86.0,"daily_will_it_rain":1,"daily_chance_of_rain":87,"daily_will_it_snow":0,"daily_chance_of_snow":0,"condition":{"text":"Moderate
+        rain","icon":"//cdn.weatherapi.com/weather/64x64/day/302.png","code":1189},"uv":4.0},"astro":{"sunrise":"05:07
+        AM","sunset":"08:38 PM","moonrise":"02:44 AM","moonset":"05:19 PM","moon_phase":"Waning
+        Crescent","moon_illumination":"18","is_moon_up":0,"is_sun_up":1},"hour":[{"time_epoch":1686762000,"time":"2023-06-14
+        13:00","temp_c":20.2,"temp_f":68.4,"is_day":1,"condition":{"text":"Partly
+        cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png","code":1003},"wind_mph":4.3,"wind_kph":6.8,"wind_degree":336,"wind_dir":"NNW","pressure_mb":1000.0,"pressure_in":29.54,"precip_mm":0.0,"precip_in":0.0,"humidity":65,"cloud":50,"feelslike_c":20.2,"feelslike_f":68.4,"windchill_c":20.2,"windchill_f":68.4,"heatindex_c":20.2,"heatindex_f":68.4,"dewpoint_c":13.4,"dewpoint_f":56.1,"will_it_rain":0,"chance_of_rain":0,"will_it_snow":0,"chance_of_snow":0,"vis_km":10.0,"vis_miles":6.0,"gust_mph":5.8,"gust_kph":9.4,"uv":6.0}]}]}}'
+  recorded_at: Tue, 13 Jun 2023 19:03:49 GMT
+- request:
+    method: get
+    uri: https://api.weatherapi.com/v1/forecast.json?date=2023-06-14&days=1&hour=14&key=DONT_SHARE_MY_DATA_1&q=burlington,vt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Jun 2023 20:08:51 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - BunnyCDN-IL1-1029
+      Cdn-Pullzone:
+      - '93447'
+      Cdn-Uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      Cdn-Requestcountrycode:
+      - US
+      Cache-Control:
+      - public, max-age=180
+      Cdn-Proxyver:
+      - '1.03'
+      Cdn-Requestpullsuccess:
+      - 'True'
+      Cdn-Requestpullcode:
+      - '200'
+      Cdn-Cachedat:
+      - 06/13/2023 20:08:51
+      Cdn-Edgestorageid:
+      - '1068'
+      Cdn-Status:
+      - '200'
+      Cdn-Requestid:
+      - 4f71bee972be9f531561a6c0661ccd8f
+      Cdn-Cache:
+      - MISS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"location":{"name":"Burlington","region":"Vermont","country":"United
+        States of America","lat":44.48,"lon":-73.21,"tz_id":"America/New_York","localtime_epoch":1686686931,"localtime":"2023-06-13
+        16:08"},"current":{"last_updated_epoch":1686686400,"last_updated":"2023-06-13
+        16:00","temp_c":20.0,"temp_f":68.0,"is_day":1,"condition":{"text":"Overcast","icon":"//cdn.weatherapi.com/weather/64x64/day/122.png","code":1009},"wind_mph":8.1,"wind_kph":13.0,"wind_degree":330,"wind_dir":"NNW","pressure_mb":1005.0,"pressure_in":29.67,"precip_mm":0.1,"precip_in":0.0,"humidity":76,"cloud":100,"feelslike_c":20.0,"feelslike_f":68.0,"vis_km":16.0,"vis_miles":9.0,"uv":4.0,"gust_mph":2.9,"gust_kph":4.7},"forecast":{"forecastday":[{"date":"2023-06-14","date_epoch":1686700800,"day":{"maxtemp_c":21.8,"maxtemp_f":71.2,"mintemp_c":13.2,"mintemp_f":55.8,"avgtemp_c":16.2,"avgtemp_f":61.1,"maxwind_mph":16.8,"maxwind_kph":27.0,"totalprecip_mm":7.7,"totalprecip_in":0.3,"totalsnow_cm":0.0,"avgvis_km":5.8,"avgvis_miles":3.0,"avghumidity":86.0,"daily_will_it_rain":1,"daily_chance_of_rain":87,"daily_will_it_snow":0,"daily_chance_of_snow":0,"condition":{"text":"Moderate
+        rain","icon":"//cdn.weatherapi.com/weather/64x64/day/302.png","code":1189},"uv":4.0},"astro":{"sunrise":"05:07
+        AM","sunset":"08:38 PM","moonrise":"02:44 AM","moonset":"05:19 PM","moon_phase":"Waning
+        Crescent","moon_illumination":"18","is_moon_up":0,"is_sun_up":1},"hour":[{"time_epoch":1686765600,"time":"2023-06-14
+        14:00","temp_c":21.7,"temp_f":71.1,"is_day":1,"condition":{"text":"Partly
+        cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png","code":1003},"wind_mph":4.9,"wind_kph":7.9,"wind_degree":340,"wind_dir":"NNW","pressure_mb":999.0,"pressure_in":29.49,"precip_mm":0.0,"precip_in":0.0,"humidity":59,"cloud":53,"feelslike_c":21.7,"feelslike_f":71.1,"windchill_c":21.7,"windchill_f":71.1,"heatindex_c":24.5,"heatindex_f":76.1,"dewpoint_c":13.3,"dewpoint_f":55.9,"will_it_rain":0,"chance_of_rain":0,"will_it_snow":0,"chance_of_snow":0,"vis_km":10.0,"vis_miles":6.0,"gust_mph":6.5,"gust_kph":10.4,"uv":6.0}]}]}}'
+  recorded_at: Tue, 13 Jun 2023 20:08:51 GMT
+recorded_with: VCR 6.1.0

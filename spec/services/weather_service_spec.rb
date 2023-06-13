@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "calls" do
+RSpec.describe "calls", vcr: { record: :new_episodes } do
   describe "connection" do
     before do 
       @service = WeatherService.new
@@ -27,7 +27,6 @@ RSpec.describe "calls" do
         vis_miles: [Float, Integer]
       }
       json = @service.current_weather("42.3265,-122.8756")
-
       expect(json).to be_a(Hash)
       exp_keys.each do |key, type|
         expect(type.include?(json[:current][key].class)).to eq(true)
@@ -73,6 +72,20 @@ RSpec.describe "calls" do
       expect(json[:forecast][:forecastday].first[:hour].first[:condition][:text]).to be_a(String)
       expect(json[:forecast][:forecastday].first[:hour].first[:condition][:icon]).to be_a(String)
       expect(json[:forecast][:forecastday].first[:hour].first[:condition][:icon].reverse[0,3]).to eq("gnp")
+    end
+
+    it "weather at certain time and destination" do
+      tomorrow = Time.now + (24 * 60 * 60)
+      date = tomorrow.strftime("%Y-%m-%d")
+      hour = tomorrow.strftime("%H")
+      json = @service.weather_at_destination("burlington,vt", date, hour)
+      expect(json[:location][:localtime]).to be_a(String)
+    end
+
+    it "local_time" do
+      time = @service.local_time("burlington,vt")
+      boulder_time = @service.local_time("boulder,co")
+      expect((7400 > (time - boulder_time)) && ((time - boulder_time) > 7000)).to eq(true)
     end
   end
 end

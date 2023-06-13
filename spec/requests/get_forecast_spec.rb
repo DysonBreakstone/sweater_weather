@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "weather" do
+RSpec.describe "weather", vcr: { record: :new_episodes } do
   describe "existence" do
     it "has response and needed attributes" do
       get "/api/v0/forecast?location=cincinatti,oh"

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "forecast poro" do
+RSpec.describe "forecast poro", vcr: { record: :new_episodes } do
   describe "instantiation and attributes" do
     before do
       @forecast = ForecastFacade.new("Burlington,VT").create_forecast
