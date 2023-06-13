@@ -57,5 +57,20 @@ RSpec.describe Api::V0::RoadTripController, type: :controller, vcr: { record: :n
       expect(json[:data][:attributes][:travel_time]).to eq("impossible")
       expect(json[:data][:attributes][:weather_at_eta].empty?).to eq(true)
     end
+
+    it "invalid API key" do
+      json_payload = {
+        "origin": "Cincinatti,OH",
+        "destination": "kyoto,japan",
+        "api_key": 8546584685446858649546895
+      }.to_json
+      request.headers['Content-Type'] = 'application/json'
+      request.headers['Accept'] = 'application/json'
+      post :create, body: json_payload
+      json = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response.status).to eq(401)
+      expect(json[:errors]).to eq("Invalid API key")
+    end
   end
 end
