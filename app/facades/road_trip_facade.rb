@@ -2,7 +2,7 @@ class RoadTripFacade
   def create_road_trip(origin, destination)
     map_service = MapquestService.new
     road_time = map_service.time_to_destination(origin, destination)
-    if road_time[:formatted_time] == "impossible"
+    if road_time[:formatted_time] == "Route is impossible or location does not exist."
       return RoadTrip.new(origin, destination, road_time[:formatted_time], {})
     end
     real_road_time = road_time[:real_time]

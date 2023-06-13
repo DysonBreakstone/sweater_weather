@@ -39,7 +39,7 @@ RSpec.describe "Mapquest Service", vcr: { record: :new_episodes } do
 
     it "not possible" do
       time = @service.time_to_destination("boulder,co", "hong kong, china")
-      expect(time[:formatted_time]).to eq("impossible")
+      expect(time[:formatted_time]).to eq("Route is impossible or location does not exist.")
     end
   end
 end

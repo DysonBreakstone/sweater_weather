@@ -54,7 +54,7 @@ RSpec.describe Api::V0::RoadTripController, type: :controller, vcr: { record: :n
       expect(json[:data][:type]).to eq("road_trip")
       expect(json[:data][:attributes][:start_city]).to eq("Cincinatti, OH")
       expect(json[:data][:attributes][:end_city]).to eq("Kyoto, JAPAN")
-      expect(json[:data][:attributes][:travel_time]).to eq("impossible")
+      expect(json[:data][:attributes][:travel_time]).to eq("Route is impossible or location does not exist.")
       expect(json[:data][:attributes][:weather_at_eta].empty?).to eq(true)
     end
 
@@ -71,6 +71,21 @@ RSpec.describe Api::V0::RoadTripController, type: :controller, vcr: { record: :n
 
       expect(response.status).to eq(401)
       expect(json[:errors]).to eq("Invalid API key")
+    end
+
+    it "nonexistent city" do
+      json_payload = {
+        "origin": "Hurgadurg, east flurgdurg",
+        "destination": "kyoto,japan",
+        "api_key": @api_key
+      }.to_json
+      request.headers['Content-Type'] = 'application/json'
+      request.headers['Accept'] = 'application/json'
+      post :create, body: json_payload
+      json = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response.status).to eq(201)
+      expect(json[:data][:attributes][:travel_time]).to eq("Route is impossible or location does not exist.")
     end
   end
 end
