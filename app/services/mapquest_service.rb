@@ -18,7 +18,10 @@ class MapquestService
   end
 
   def time_to_destination(city_1, city_2)
+    time = {}
     response = JSON.parse(conn.get("/directions/v2/route?from=#{city_1}&to=#{city_2}").body, symbolize_names: true)
-    time = response[:route][:realTime]
+    time[:real_time] = response[:route][:realTime]
+    time[:formatted_time] = response[:route][:formattedTime]
+    time
   end
 end

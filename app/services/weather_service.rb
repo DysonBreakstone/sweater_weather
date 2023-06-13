@@ -12,7 +12,6 @@ class WeatherService
       request.params["q"] = "#{location}"
     end
     JSON.parse(response.body, symbolize_names: true)
-    require 'pry'; binding.pry
   end
 
   def daily_weather(location)

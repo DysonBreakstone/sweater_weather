@@ -21,12 +21,20 @@ RSpec.describe "Mapquest Service" do
 
     it "#time_to_destination" do
       time = @service.time_to_destination("plainfield,vt", "crested butte,co")
-      expect(time).to be_a(Integer)
+      expect(time).to be_a(Hash)
+      expect(time[:real_time]).to be_a(Integer)
+      expect((time[:real_time] > 116500) && (time[:real_time] < 117500)).to eq(true)
+      expect(time[:formatted_time]).to be_a(String)
+      expect(time[:formatted_time][0,2]).to eq("31")
     end
 
     it "closer destinations" do
       time = @service.time_to_destination("Boulder,co", "Denver,co")
-      expect(time).to be_a(Integer)
+      expect(time).to be_a(Hash)
+      expect(time[:real_time]).to be_a(Integer)
+      expect((time[:real_time] > 2100) && (time[:real_time] < 2350)).to eq(true)
+      expect(time[:formatted_time]).to be_a(String)
+      expect(time[:formatted_time][0,4]).to eq("00:3")
     end
   end
 end
